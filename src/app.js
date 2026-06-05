@@ -4,11 +4,15 @@ const app = express();
 
 const formulariosRouter = require('./routes/formularios');
 
+const empresasRouter = require('./routes/empresas');
+
 // Middlewares básicos para parsear JSON y formularios
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/formularios', formulariosRouter);
+
+app.use('/empresas', empresasRouter);
 
 // Ruta de prueba para ver que el servidor está vivo
 app.get('/', (req, res) => {
