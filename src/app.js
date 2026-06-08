@@ -8,6 +8,8 @@ const empresasRouter = require('./routes/empresas');
 
 const inspeccionesRouter = require('./routes/inspecciones');
 
+const respuestasRouter = require('./routes/respuestas');
+
 // Middlewares básicos para parsear JSON y formularios
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,6 +19,8 @@ app.use('/formularios', formulariosRouter);
 app.use('/empresas', empresasRouter);
 
 app.use('/inspecciones', inspeccionesRouter);
+
+app.use('/respuestas', respuestasRouter);
 
 // Ruta de prueba para ver que el servidor está vivo
 app.get('/', (req, res) => {

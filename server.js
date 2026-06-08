@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const app = require('./src/app');
 const sequelize = require('./src/config/basededatos');
+const fs = require('fs');
 
 const puerto = process.env.PORT || 3000;
 
@@ -17,6 +18,10 @@ async function iniciarServidor() {
   } catch (error) {
     console.error('No se pudo conectar a la base de datos:', error.message);
   }
+}
+
+if (!fs.existsSync('uploads')) {
+  fs.mkdirSync('uploads');
 }
 
 iniciarServidor();
