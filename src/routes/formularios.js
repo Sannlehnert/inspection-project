@@ -1,5 +1,3 @@
-// src/routes/formularios.js
-
 const express = require('express');
 const router = express.Router();
 const formulariosController = require('../controllers/formulariosController');

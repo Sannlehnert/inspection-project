@@ -1,5 +1,3 @@
-// src/controllers/formulariosController.js
-
 const { Formulario, Categoria, Pregunta } = require('../models');
 const sequelize = require('../config/basededatos');
 

@@ -1,5 +1,3 @@
-// src/middlewares/validarFormulario.js
-
 function validarFormulario(req, res, next) {
   const { nombre, revision, categorias } = req.body;
 
